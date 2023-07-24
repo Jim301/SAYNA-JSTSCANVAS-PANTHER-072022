@@ -1,0 +1,445 @@
+/*
+    || CSS GLOBAL FOR ALL PAGE (HEADER, FOOTER, FONTS, SIDEBAR)
+*/
+/*---------
+    || FONTS
+----------------*/
+/* BEYNO */
+@font-face {
+    src: url('../fonts/BEYNO/BEYNO.otf');
+    font-family: 'BEYNO';
+}
+
+/* Cantarell */
+@font-face {
+    src: url('../fonts/Cantarell/Cantarell-Regular.ttf');
+    font-family: 'Cantarell';
+}
+
+/* Panthera */
+@font-face {
+    src: url('../fonts/Panthera/PantheraRegular-MVZ9J.ttf');
+    font-family: 'Panthera';
+}
+
+/* wakanda forever */
+@font-face {
+    src: url('../fonts/wakanda_forever/WakandaForever-Regular.ttf');
+    font-family: 'Wakanda forever';
+}
+:root {
+    --white: #FFFFFF;
+    --rose-400: #F2CEF2;
+    --rose-800: #DF99F2;
+    --violet-400: #9E91B7;
+    --violet-800: #3D2DA6;
+    --dark-blue-400: #07338C;
+    --dark-blue-800: #021740;
+}
+
+html {
+    font-size: 1vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%, rgba(2, 23, 64, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+	font-family: 'Cantarell';
+	height: 100%;
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+/* Input text color white */
+input[type="text"] {
+    color: #fff;
+}
+
+/* Title */
+h1 {
+    font-family: 'Panthera', sans-serif;
+	text-transform: uppercase;
+	/* font-size: 68px; */
+    font-size: 2em; 
+	font-weight: 200;
+	color: #9E91B7;
+	
+}
+
+/* Subtitle */
+h2 {
+    font-family: 'BEYNO', sans-serif;
+    font-size: 1.25em; /* font-size to 2*pricipal text-size (2*16= 32px) */
+    font-weight: 200;
+	color: #9E91B7;
+	margin-bottom: 2%;
+	margin-top: 1%;
+}
+
+/* Other subtile */
+h2.wakanda-forever {
+    font-family: 'Wakanda forever', sans-serif;
+    font-size: 2.68em;
+	font-weight: 400;
+    letter-spacing: 0.15em; /* 0.15*16=2.4px */
+}
+
+h3 {
+    font-family: 'Cantarell', sans-serif;
+    font-size: 2em;
+}
+.zoomi:hover h1{
+    font-size: 4.25em;/* font-size to 4.25*pricipal text-size (4.25*16= 68px) */
+	font-weight: 300;
+}
+
+.zoomi:hover h2{
+    font-size: 2em;/* font-size to 2*pricipal text-size (2*16= 32px) */
+	font-weight: 300;
+}
+.titre {
+    font-size: 1.5em;
+}
+
+.text {
+    font-family: 'Cantarell';
+    font-size: 1em;
+	margin-bottom: 5%;
+	opacity:96%;
+}
+
+/* Specifics font for all citation text */
+.text-citation {
+    font-family: 'Cantarell';
+    font-size: 0.87em;
+	margin-bottom: 5%;
+	opacity:80%;
+}
+
+/* Specifics font for the footer text */
+.text-footer {
+    font-family: 'Cantarell';
+    font-size: 0.62em;
+}
+
+/* Specified align center for all text with class 'center' */
+.center {
+    text-align: center;
+}
+
+/*
+    || STYLE FOR HEADER
+*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 10vw;
+}
+
+header nav {
+	display: flex;
+	align-items: center;
+	width: 25vw;
+	justify-content: space-between;
+	margin-right: 0em;
+}
+
+header nav ul {
+	font-size: 1.25vw;
+	gap: 5vw;
+	width: 43vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	opacity: 70%;
+}
+
+header nav a.selected, header nav a:hover {
+    color: var(--white);
+    opacity: 150%;
+    text-decoration: none;
+}
+
+/* Style for logo */
+.logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 2em;
+	width: 10vw;  
+    height: 2vw; /* 2% of screen width */
+	
+}
+
+.logo img{
+	
+	filter: invert(0%) hue-rotate(0deg) saturate(100%);
+    transition: filter 0.3s; /* reverse color of logo (20%) (grey) */
+    cursor: pointer;
+	
+	
+}
+.logo:hover .logo1{
+    box-shadow: 0px 0px 20px 2px white;
+    background-color: #ffffff56;
+}
+
+.logo:hover .logo2{
+   box-shadow: 0px 0px 20px 2px white;
+   background-color: #ffffff6b;
+   
+}
+
+.logo:hover .logo3{
+   box-shadow: 0px 0px 20px 2px white;
+   background-color: #ffffff56;
+}
+
+
+
+a {
+    text-decoration: none; /* remove underline for link */
+	color: var(--white);
+}
+
+ul li {
+    list-style-type: none; /* remove style type */
+}
+
+ul[class='nav'] li {
+    display: inline-flex;
+}
+
+ul li a {
+    list-style-type: none;
+    font-family: 'BEYNO';
+    color: #fff;
+}
+
+ul li[class='active'] a  {
+    font-weight: bolder;
+    text-decoration: underline;
+    color: #9E91B7;
+}
+
+
+main {
+    padding-bottom:5%;
+	background-image:  url('../images/all/arrière_plan.png');
+    background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+/*
+    || STYLE FOR FOOTER
+*/
+footer h2 {
+    font-family: 'Cantarell';
+    letter-spacing: 0.75em;
+    font-size: 1em;
+}
+
+/* SIDEBAR */
+aside {
+    height: 28vw;
+    display: grid;
+    width: 1vw;
+    border-left: 3px solid #9E91B7;
+    float: left;
+    position: absolute;
+    top:  0;
+    left: 3vw;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    transition: transform 0.3s ease-in-out;
+}
+
+aside .ligne {
+    grid-row: 1;
+    border-right: 2px solid #9E91B7;
+    width: 113%;
+	height: 20em;
+}
+
+aside .social-networks {
+    grid-row: 2;
+    margin-left: 58%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* padding-bottom: 7%; */
+	margin-bottom: -125%;
+}
+
+aside ul li {
+    margin-top: 5%;
+}
+
+aside ul li:hover {
+    filter: brightness(0) invert(1);
+}
+
+/* GRID FOOTER */
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 3%;
+    width: 20vw;
+}
+
+footer {
+    background: linear-gradient(to bottom, #3D2DA6, #021740);
+    margin-left: -1%;
+    height: 40vw;
+    width: 100vw;
+    display: grid; /* Define display grid */
+    grid-template-columns: 1fr 1fr; /* Grid contains 2 columns (1/2 width, 1/2 width) */
+    grid-template-rows: 1fr 4fr; /* Grid contains 2 rows (1/5 height, 4/5 height) */
+}
+
+footer .part-1 {
+    grid-column: 1; /* define the emplacement of this element in: col 1 */
+    grid-row: 2/5;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20%;
+    position: relative;
+}
+
+footer .part-1 .img-1 {
+    position: absolute;
+    z-index: 1;
+    width: 20vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .part-1 .img-2 {
+    position: absolute;
+    z-index: 2;
+    width: 10vw;
+    right: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .part-2 {
+    grid-column: 2 / 3;
+    grid-row: 2/5;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+footer .part-2-1 {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+footer .part-2-1 a {
+    color: #FFFFFF;
+}
+
+footer .part-2-2 {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+footer .part-2-2 img {
+    width: 50%;
+}
+
+footer .part-2-3 {
+    grid-column: 1 / 3;
+    grid-row: 2;
+
+}
+
+footer .part-2-1 p {
+    text-transform: capitalize;
+}
+
+/*
+    || ANIMATION
+*/
+/* Effet de surbrillance */
+button:hover {
+    box-shadow: 0px 16px 32px 0px #000;
+    cursor: pointer;
+}
+
+/* Effet de zoom */
+footer .part-1:hover .img-1, footer .part-1:hover .img-2 {
+    transform: scale(1.1);
+}
+
+footer .part-2-2 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .part-2-2 img:hover {
+    transform: scale(1.3);
+}
+
+/* FADE IN */
+.fade-in {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-4em); 
+    transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
+}
+
+.fade-in-top {
+    animation-name: fade-in-top;
+    animation-duration: 6s;
+}
+
+/* define fade-in animation from left */
+@keyframes fade-in-top {
+    from {
+        opacity: 0; /* from opacity 0 */
+        transform: translateY(-100%); /* from left -50px */
+    }
+    to {
+        opacity: 1; /* to opacity 1 */
+        transform: translateY(0); /* to true position */
+    }
+}
+
+.fade-in-start {
+    animation-name: fade-in;
+    animation-duration: 3s;
+}
+
+/* define fade-in animation from left */
+@keyframes fade-in {
+    from {
+        opacity: 0; /* from opacity 0 */
+        transform: translateX(-50px); /* from left -50px */
+    }
+    to {
+        opacity: 1; /* to opacity 1 */
+        transform: translateX(0); /* to true position */
+    }
+}
+
+h1:hover, h2:hover {
+    transform: scale(1.1);
+    transition: transform 2s ease-in-out;
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
